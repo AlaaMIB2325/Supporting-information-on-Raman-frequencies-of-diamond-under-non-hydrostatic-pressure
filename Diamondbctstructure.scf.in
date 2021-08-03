@@ -1,0 +1,33 @@
+&control
+ calculation = 'scf'
+ restart_mode='from_scratch',
+ prefix='D7',
+ tstress = .true.
+ tprnfor = .true.
+ pseudo_dir = './',
+ outdir='./'
+ /
+&system
+ ibrav= 7,
+ celldm(1)= 4.71,                               
+ celldm(3) = 1.414213562,
+ nat= 2, 
+ ntyp= 1,
+ ecutwfc = 130,
+ /
+&electrons
+ mixing_beta = 0.7
+ conv_thr = 1.0d-8
+ /
+ &ions
+ /
+ &cell
+  press=70.,
+ /
+ ATOMIC_SPECIES
+ C 12.0107 C.pz-vbc.UPF    
+ ATOMIC_POSITIONS crystal
+C 0.00 0.00 0.00
+C 0.50 0.25 -0.25
+ K_POINTS automatic
+ 8 8 8 0 0 0
