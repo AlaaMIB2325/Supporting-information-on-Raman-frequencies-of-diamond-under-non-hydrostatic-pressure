@@ -1,0 +1,17 @@
+#In the case of the loading along the [001] axes.
+
+#used Akaham's equation P=3141-4.157\omega+1.429e-3\omega**2, assuming that P=sigma_z
+taking P in the range [200,400]
+and \omega in the range [1700,1900]
+#wrote a python code to find P(\omega), then used our expression to calculat \sigma_r 
+#finding the root of the expression 
+#haveing sigma_z and sigma_r we calculated the sheare stress \tau=sigma_z-\sigma_r
+#plot \tau vs \sigma_z
+
+
+
+
+#In the case of the loading along the [111] axes.
+#minimized the proposed expression to find \sigma_r and \sigma_z
+#calculated the shear stress
+#plot \tau vs \sigma_z
