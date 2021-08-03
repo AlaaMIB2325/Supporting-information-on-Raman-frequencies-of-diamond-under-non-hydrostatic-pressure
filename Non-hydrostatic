@@ -1,0 +1,8 @@
+Splitting and constant volume calculations for bct and rhombohedral
+
+#in the input file of bct.scf we varied the c/a and a keeping the volume constant (V/a^3=c/a)
+#run .scf obtained output file where the stress tensor is no longer diagonal, extract the values of sr and sz 
+#plot sr vs sz (constant volume plot)
+
+#Then preform ph.x calculations for each of the .scf .nscf files, get the ws and wd
+#plot ws/wd vs sz (splitting)
