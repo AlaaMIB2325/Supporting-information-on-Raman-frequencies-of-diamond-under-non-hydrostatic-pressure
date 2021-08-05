@@ -6,7 +6,7 @@ and \omega in the range [1700,1900]
 #wrote a python code to find P(\omega), then used our expression to calculat \sigma_r 
 #finding the root of the expression 
 #haveing sigma_z and sigma_r we calculated the sheare stress \tau=sigma_z-\sigma_r
-#plot \tau vs \sigma_z
+#plot \tau vs \sigma_z ()
 
 
 
