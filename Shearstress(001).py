@@ -24,7 +24,6 @@ for fname in filelist:
         tick.label1.set_fontsize(fontsize)
         tick_params(labelsize=12)
     legend(loc="upper left",prop={"size":12})
-    plt.savefig('Figure4.pdf')
        
 show()
    
