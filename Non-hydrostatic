@@ -1,14 +1,17 @@
 Splitting and constant volume calculations for bct and rhombohedral
 
-#in the input file of bct.scf we varied the c/a and a keeping the volume constant (V/a^3=c/a)
+#[001]
+#in the input file of bct.scf we varied the c/a and a keeping the volume constant (V=a^2 x c )
 #run .scf obtained output file where the stress tensor is no longer diagonal, extract the values of \sigma_r and \sigma_z 
-#plot \sigma_r vs \sigma_z (constant volume plot)
+#plot \sigma_r vs \sigma_z (constant volume plot ---> V1.dat up to V20.dat)
 
 #Then preform ph.x calculations for each file, get the \omega_s and \omega_d
-#plot \omeg_s and \omeg_d vs \sigma_z (splitting)
+#plot \omeg_s and \omeg_d vs \sigma_z (splitting ---> V1.dat up to V20.dat)
 
-#in the input file of rhombohedral.scf we varied the c/a and a keeping the volume constant (V/a^3=c/a)
+#[111]
+#in the input file of rhombohedral.scf we varied the a and the angle keeping the volume constant (V=a^3 (1-3cos^2(\alpha)+2cos^3(\alpha)))
 #run .scf obtained output file where the stress tensor is no longer diagonal, extract the values of \sigma_r and \sigma_z 
-#plot \sigma_r vs \sigma_z (constant volume plot)
+#plot \sigma_r vs \sigma_z (constant volume plot ---> V1.data up to V10.data)
 
-#Similarly, for the rhombohedral 
+#Then preform ph.x calculations for each file, get the \omega_s and \omega_d
+#plot \omeg_s and \omeg_d vs \sigma_z (splitting ---> V1.data up to V20.data)
