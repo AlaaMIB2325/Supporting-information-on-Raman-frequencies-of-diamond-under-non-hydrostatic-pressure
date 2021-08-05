@@ -6,7 +6,7 @@ and \omega in the range [1700,1900]
 #wrote a python code to find P(\omega), then used our expression to calculat \sigma_r 
 #finding the root of the expression 
 #haveing sigma_z and sigma_r we calculated the sheare stress \tau=sigma_z-\sigma_r
-#plot \tau vs \sigma_z ()
+#plot \tau vs \sigma_z (Shearstress(001).dat and Shearstress(001).py)
 
 
 
@@ -14,4 +14,4 @@ and \omega in the range [1700,1900]
 #In the case of the loading along the [111] axes.
 #minimized the proposed expression to find \sigma_r and \sigma_z
 #calculated the shear stress
-#plot \tau vs \sigma_z
+#plot \tau vs \sigma_z (Shearstress(111).dat and Shearstress(111).py)
