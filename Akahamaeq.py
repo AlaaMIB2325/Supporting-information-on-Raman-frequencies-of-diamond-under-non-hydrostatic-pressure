@@ -1,4 +1,4 @@
-#IN this file we calculated the sigma_{z} assume that it is the pressure on the sample P using Akahama's equation. Taking the range of the frequences b/w (1700-1900) were they only observed the singet mode. 
+#In this file we calculated the sigma_{z} assume that it is the pressure on the sample P using Akahama's equation. Taking the range of the frequences b/w (1700-1900) were they only observed the singet mode. 
 
 import numpy as np
 
