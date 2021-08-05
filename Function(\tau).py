@@ -1,4 +1,4 @@
-#I used the paramerters obtained from the fit, plotting w^{s,d} for [001] and [111] as a function \tau explicitly.
+#I used the paramerters obtained from the fit, plotting \omega^{s,d} for [001] and [111] as a function of \tau explicitly.
 import numpy as np
 from matplotlib import rc,rcParams
 import matplotlib.pyplot as plt
