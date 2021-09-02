@@ -2,5 +2,5 @@ We did calculations of the hydrostatic case for fcc, bct and rhombohedral.
 #varying the lattice paremeter in the input file
 #then take the values of the stress tensor from the output file
 #where the stress tensor is diagonal and \sigma_x=\sigma_y=\sigma_r=\sigma_z
-#write it to a dat file (PvsF.dat)
+#we did phonon calculations and obtained the wavenumber(cm^-1)
 #plot the results.
