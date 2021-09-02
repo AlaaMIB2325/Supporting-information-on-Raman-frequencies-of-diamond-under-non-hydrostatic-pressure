@@ -9,6 +9,17 @@ from matplotlib.pyplot import*
 
 #####singletpara########################################
 
+d0= 0.536349         
+d1= -0.000587159     
+d2= -3.91498e-07    
+f0= -2.57406e-06     
+f1= -1.88292e-08    
+f2= -2.79329e-08     
+g0= -2.23224e-07     
+g1= 3.24683e-09     
+g2= 6.3714e-11 
+##############doublet#############################
+
 a0= -1.04981         
 a1= 0.000926585      
 a2=-3.61312e-06   
@@ -18,18 +29,7 @@ b2= -2.23622e-08
 c0= -3.23643e-07    
 c1= 4.24306e-09     
 c2= 7.10848e-11   
-
-##############doublet#############################
-
-d0= 0.536349         
-d1= -0.000587159     
-d2= -3.91498e-07    
-f0= -2.57406e-06     
-f1= -1.88292e-08    
-f2= -2.79329e-08     
-g0= -2.23224e-07     
-g1= 3.24683e-09     
-g2= 6.3714e-11    
+     
 
     
 
@@ -38,12 +38,12 @@ def p(x,y):
     
     
     
-def ws(x,y):
+def wd(x,y):
     #x,y=par
     return (1344.423069+2.28008*p(x,y)-0.00174805*p(x,y)*p(x,y)-(a0+a1*(p(x,y)-300)+a2*(p(x,y)-300)**2)*(y-x)-(b0+b1*(p(x,y)-300)+b2*(p(x,y)-300)**2)*(x-y)*(x-y)-(c0+c1*(p(x,y)-300)+c2*(p(x,y)-300)**2)*(y-x)*(y-x)*(y-x))
     
 
-def wd(x,y):
+def ws(x,y):
     #x,y=par 
     return (1344.423069+2.28248*p(x,y)--0.00175277*p(x,y)*p(x,y)-(d0+d1*(p(x,y)-300)+d2*(p(x,y)-300)**2)*(y-x)-(f0+f1*(p(x,y)-300)+f2*(p(x,y)-300)**2)*(x-y)*(x-y)-(g0+g1*(p(x,y)-300)+g2*(p(x,y)-300)**2)*(y-x)*(y-x)*(y-x))
 
@@ -77,10 +77,10 @@ for fname in filelist:
 	tb=(sz-sr)
 	print(tb)
 	
-	plot(data[:,0],tb,'-r', linewidth=2,label=r'$\tau (P)$')
-	plot(data[:,0],data[:,6],'--b',linewidth=2,label=r'$\sigma_{z} (P)$')
-	plot(data[:,0],data[:,5],'-.g',linewidth=2,label=r'$\sigma_{r} (P)$')
-	xlabel('P (GPa)', fontsize='14')
+	plot(data[:,0],tb,'-r', linewidth=2,label=r'$\tau (P_s)$')
+	plot(data[:,0],data[:,6],'--b',linewidth=2,label=r'$\sigma_{z} (P_s)$')
+	plot(data[:,0],data[:,5],'-.g',linewidth=2,label=r'$\sigma_{r} (P_s)$')
+	xlabel(r'$P_s$ (GPa)', fontsize='14')
 	ylabel(r'$\sigma_{z}$ (GPa), $\sigma_{r}$ (GPa), $\tau$ (GPa)', fontsize='14')
 	tick_params(labelsize=12)
 	legend(bbox_to_anchor=(0.95,0.95 ), loc=1, borderaxespad=0.)
@@ -94,11 +94,11 @@ for fname in filelist:
     		
 	tick_params(labelsize=11)
 	legend(loc="upper left",prop={"size":12})
-	plt.savefig('Figure4.pdf')
+	plt.savefig('Figure5.pdf')
 	show()
-	plot(data[:,0],tb,'-g',linewidth=2,label=r'$\tau (P)$')
+	plot(data[:,0],tb,'-g',linewidth=2,label=r'$\tau (P_s)$')
 	plot(data[:,6],tb,'--b',linewidth=2,label=r'$\tau (\sigma_{z})$')
-	xlabel('P (GPa), $\sigma_{z}$ (GPa)', fontsize='14')
+	xlabel(r'$P_s (GPa)$, $\sigma_{z}$ (GPa)', fontsize='14')
 	ylabel(r'$\tau$ (GPa)', fontsize='14')
 	tick_params(labelsize=11)
 	legend(bbox_to_anchor=(0.95,0.95 ), loc=1, borderaxespad=0.)
@@ -112,7 +112,7 @@ for fname in filelist:
 
 	tick_params(labelsize=11)
 	legend(loc="upper left",prop={"size":12})
-	plt.savefig('Figure5.pdf')
+	plt.savefig('Figure6.pdf')
 	show()
 
 
