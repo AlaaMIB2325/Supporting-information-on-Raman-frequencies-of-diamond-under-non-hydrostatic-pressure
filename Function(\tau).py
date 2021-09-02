@@ -1,10 +1,9 @@
-#I used the paramerters obtained from the fit, plotting \omega^{s,d} for [001] and [111] as a function of \tau explicitly.
+#Using the paramerters obtained from the fit, plotting \omega^{s,d} for [001] and [111] as a function of  the shear stress \tau.
 import numpy as np
-from matplotlib import rc,rcParams
 import matplotlib.pyplot as plt
 
 t=np.linspace(0,200)
-##wd111
+#omega_d[111]-->wd
 def wd(p,t): 
     a0= 0.536349       
     a1= -0.000587159    
@@ -18,7 +17,7 @@ def wd(p,t):
     
     return 1344.423069+2.28248*p-0.00175277*p**2-(a0+a1*(p-300)+a2*(p-300)**2)*t-(b0+b1*(p-300)+b2*(p-300)**2)*t**2-(c0+c1*(p-300)+c2*(p-300)**2)*t**3
     
-##ws111
+#omega_s[111]-->ws
 def ws(p,t):
     d0= -1.0498
     d1=0.000926507     
@@ -80,11 +79,12 @@ for tick in ax.yaxis.get_major_ticks():
     
 plt.tick_params(labelsize=10)
 plt.legend(loc='center left', bbox_to_anchor=(0.985, 0.5)) 
+plt.savefig('Figure2.pdf') 
 plt.show() 
+
  
  
- 
-##ws001
+#omega_s[001]-->ws1
 def ws1(p,t):
     a0d= -0.0790066       
     a1d= 0.00115792      
@@ -98,7 +98,7 @@ def ws1(p,t):
     return 1364.423069+2.45332*p-0.00224011*p**2-(a0d+a1d*(p-300)+a2d*(p-300)**2)*t-(b0d+b1d*(p-300)+b2d*(p-300)**2)*t**2-(c0d+c1d*(p-300)+c2d*(p-300)**2)*t**3
   
   
-##wd001
+#omega_d[001]-->wd1
 def wd1(p,t):
     a0s = -0.0166169
     a1s = 0.00154663
@@ -112,8 +112,7 @@ def wd1(p,t):
     return 1364.423069+2.43842*p-0.00216728*p**2-(a0s+a1s*(p-300)+a2s*(p-300)**2)*t-(b0s+b1s*(p-300)+b2s*(p-300)**2)*t**2-(c0s+c1s*(p-300)+c2s*(p-300)**2)*t**3 
     
     
-#plt.plot(t,ws1(0,t),'--y',linewidth=2, label='$\omega^{d}$,0')
-#plt.plot(t,ws1(50,t),'--k',linewidth=2, label='$\omega^{d}$,50')
+
 plt.plot(t,ws1(100,t),'--g',linewidth=2, label='$\omega^{d}$,100')
 plt.plot(t,ws1(150,t),'--b',linewidth=2, label='$\omega^{d}$,150')
 plt.plot(t,ws1(200,t),'--y',linewidth=2, label='$\omega^{d}$,200')
@@ -140,8 +139,6 @@ for tick in ax.yaxis.get_major_ticks():
     
 plt.tick_params(labelsize=10)
 plt.legend(loc='center left', bbox_to_anchor=(0.985, 0.5)) 
-#plt.plot(t,wd1(0,t),'-y',linewidth=2, label='$\omega^{s}$,0')
-#plt.plot(t,wd1(50,t),'-k',linewidth=2, label='$\omega^{s}$,50')
 plt.plot(t,wd1(100,t),'-g',linewidth=2, label='$\omega^{s}$,100')
 plt.plot(t,wd1(150,t),'-b',linewidth=2, label='$\omega^{s}$,150')
 plt.plot(t,wd1(200,t),'-y',linewidth=2, label='$\omega^{s}$,200')
@@ -168,6 +165,6 @@ for tick in ax.yaxis.get_major_ticks():
     
 plt.tick_params(labelsize=10)
 plt.legend(loc='center left', bbox_to_anchor=(0.985, 0.5)) 
+plt.savefig('Figure3.pdf') 
 plt.show()
-
  
