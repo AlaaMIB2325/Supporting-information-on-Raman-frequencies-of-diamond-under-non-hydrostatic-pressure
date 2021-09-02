@@ -1,3 +1,6 @@
+
+
+
 import numpy as np
 import scipy.optimize as opt
 from scipy.optimize import basinhopping
@@ -18,7 +21,7 @@ f2= -2.79329e-08
 g0= -2.23224e-07     
 g1= 3.24683e-09     
 g2= 6.3714e-11 
-##############doublet#############################
+##############doubletpara#############################
 
 a0= -1.04981         
 a1= 0.000926585      
@@ -60,10 +63,10 @@ def func(par):
 
 res=opt.basinhopping(func, [220,220])
 		
-#print(reswd)
-#print(resws)
-#print(res)
-#print(ws(122.37,199.45),wd(122.37,199.45))
+print(reswd)
+print(resws)
+print(res)
+print(ws(122.37,199.45),wd(122.37,199.45))
 
 
 
@@ -98,7 +101,7 @@ for fname in filelist:
 	show()
 	plot(data[:,0],tb,'-g',linewidth=2,label=r'$\tau (P_s)$')
 	plot(data[:,6],tb,'--b',linewidth=2,label=r'$\tau (\sigma_{z})$')
-	xlabel(r'$P_s (GPa)$, $\sigma_{z}$ (GPa)', fontsize='14')
+	xlabel(r'$P_s$ (GPa), $\sigma_{z}$ (GPa)', fontsize='14')
 	ylabel(r'$\tau$ (GPa)', fontsize='14')
 	tick_params(labelsize=11)
 	legend(bbox_to_anchor=(0.95,0.95 ), loc=1, borderaxespad=0.)
