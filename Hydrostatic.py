@@ -1,6 +1,7 @@
 #Using the obtained values of the fit parameters of our proposed experssion for omega^{s,d} in case of [111]loading and [001] loading, compare it with the experimantal data and the calculated omega for the hydrostatic case fcc.
 
 
+from scipy import optimize
 
 import numpy as np
 from matplotlib import rc,rcParams
@@ -53,7 +54,7 @@ x5 = np.linspace(0, 400, 10, endpoint = True)
 y5 = ( c5* (x5 * x5)) + (b5 * x5) + a5
 
 
-filelist=['D2PvsF.dat']
+filelist=['PvsF.dat']
 for fname in filelist:
     data=np.loadtxt(fname)
     P=data[:,1]
@@ -62,10 +63,6 @@ for fname in filelist:
     plt.plot(data[:,1], data[:,2], '-g',linewidth=2, label=r'$\omega_{H}$ calculated')
 
 
-#plt.plot(x0, y0, '-g',linewidth=2, label=r'$\omega_{H[001]}^{d}$')
-#plt.plot(x1, y1, '-r',linewidth=2, label=r'$\omega_{H[001]}^{s}$')
-#plt.plot(x2, y2, '-b',linewidth=2, label=r'$\omega_{H[111]}^{s}$')
-#plt.plot(x3, y3, '-m',linewidth=2, label=r'$\omega_{H[111]}^{d}$')
 plt.plot(x4, y4, '--b',linewidth=2, label='Experimental data')
 
 
@@ -84,5 +81,5 @@ for tick in axes.yaxis.get_major_ticks():
 plt.tick_params(labelsize=10)
 plt.legend(bbox_to_anchor=(0.93,0.93 ), loc=1, borderaxespad=0.)
 plt.legend(loc='upper left',prop={"size":11})
-
+plt.savefig('Figure1.pdf')
 plt.show()
