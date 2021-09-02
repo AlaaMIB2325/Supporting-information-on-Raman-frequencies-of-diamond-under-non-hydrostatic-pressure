@@ -1,5 +1,4 @@
-#I used the obtained values of the fit parameters of our proposed 
-#Experssion for w_{s,d} in case of [111] and [001], compare it with the experimantal data and the calculated w for the hydrostatic case fcc.
+#Using the obtained values of the fit parameters of our proposed experssion for omega^{s,d} in case of [111]loading and [001] loading, compare it with the experimantal data and the calculated omega for the hydrostatic case fcc.
 
 
 
