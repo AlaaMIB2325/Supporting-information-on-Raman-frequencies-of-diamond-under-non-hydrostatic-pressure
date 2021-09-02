@@ -4,13 +4,13 @@ kpoint convergence
 #we varied the kpoint [2,4,6,8,10] in the file kp.sh
 #run ./kp.sh
 #output kp.dat file
-#polt the Energy vs kp using gnuplot
+#plot the Energy vs kp using gnuplot
 
 ecut convergence
 #we varied the ecut in range [70..200..10] in the file ecut.sh
 #run ./ecut.sh
 #output ecut.dat file
-#polt the Energy vs ecut using gnuplot
+#plot the Energy vs ecut using gnuplot
 
 alat convergence
 #we varied the alat values in the file alat.sh
@@ -18,17 +18,6 @@ alat convergence
 #output ecut.dat file
 #plot the Energy vs alat using gnuplot
 
-
-After that we also preformed ev.x calculations for both fcc, bct 
-They coincide, plot the results.
-
-we found for fcc equation of state: murnaghan.
-# a0 =  6.6639 a.u.
-# a0 =  3.52639 Ang 
-and for bct 
-equation of state: keane.
-# V0 =    4.71 a.u.^3
-# V0 =    0.70  Ang^3
 
 visualize the input files with the obtained values from the convergence tests for both fcc and bct using Xcrysden
 
