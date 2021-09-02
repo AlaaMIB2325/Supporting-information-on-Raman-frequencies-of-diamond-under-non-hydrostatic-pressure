@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 t=np.linspace(0,200)
-#omega_d[111]-->wd
+#omega^d[111]-->wd
 def wd(p,t): 
     a0= 0.536349       
     a1= -0.000587159    
@@ -17,7 +17,7 @@ def wd(p,t):
     
     return 1344.423069+2.28248*p-0.00175277*p**2-(a0+a1*(p-300)+a2*(p-300)**2)*t-(b0+b1*(p-300)+b2*(p-300)**2)*t**2-(c0+c1*(p-300)+c2*(p-300)**2)*t**3
     
-#omega_s[111]-->ws
+#omega^s[111]-->ws
 def ws(p,t):
     d0= -1.0498
     d1=0.000926507     
@@ -84,7 +84,7 @@ plt.show()
 
  
  
-#omega_s[001]-->ws1
+#omega^s[001]-->ws1
 def ws1(p,t):
     a0d= -0.0790066       
     a1d= 0.00115792      
@@ -98,7 +98,7 @@ def ws1(p,t):
     return 1364.423069+2.45332*p-0.00224011*p**2-(a0d+a1d*(p-300)+a2d*(p-300)**2)*t-(b0d+b1d*(p-300)+b2d*(p-300)**2)*t**2-(c0d+c1d*(p-300)+c2d*(p-300)**2)*t**3
   
   
-#omega_d[001]-->wd1
+#omega^d[001]-->wd1
 def wd1(p,t):
     a0s = -0.0166169
     a1s = 0.00154663
