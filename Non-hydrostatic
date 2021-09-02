@@ -5,7 +5,7 @@ Splitting and constant volume calculations for bct and rhombohedral
 #run .scf obtained output file where the stress tensor is no longer diagonal, extract the values of \sigma_r and \sigma_z 
 #plot \sigma_r vs \sigma_z (constant volume plot ---> V1.dat up to V20.dat)
 
-#Then preform ph.x calculations for each file, get the \omega_s and \omega_d
+#Then preform ph.x calculations for each file, get the \omega_s and \omega_d from te outut file
 #plot \omeg_s and \omeg_d vs \sigma_z (splitting ---> V1.dat up to V20.dat)
 
 #[111]
