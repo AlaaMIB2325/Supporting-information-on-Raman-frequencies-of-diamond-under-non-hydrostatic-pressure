@@ -9,17 +9,17 @@
 /
 
 &SYSTEM
-   ibrav = 2                  ! Bravais Lattice index -- 2 for fcc
-   celldm(1) = 6.66405         !3.57Lattice parameter in Ang
-   nat = 2                    ! Num of atoms in cell
+   ibrav = 2                
+   celldm(1) = 6.66405         
+   nat = 2                    
    ntyp = 1 
-   nspin=2                  ! Num of atom types
-   ecutwfc = 130             ! Cutoff energy in Rydberg
+   nspin=2                  
+   ecutwfc = 130            
 /
 
 &ELECTRONS
-   conv_thr = 1.0d-8 ! SCF convergence
-   mixing_beta = 0.7 ! mixing factor for self-consistency
+   conv_thr = 1.0d-8 
+   mixing_beta = 0.7 
 /
 &ions
  /
@@ -27,7 +27,7 @@
   press=70.,
  /
 ATOMIC_SPECIES
- C 12.011 C.pz-vbc.UPF      !LDA
+ C 12.011 C.pz-vbc.UPF      
 ATOMIC_POSITIONS crystal
  C 0.000 0.000 0.000
  C 0.250 0.250 0.250
