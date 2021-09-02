@@ -5,13 +5,14 @@ import numpy as np
 def Akahameaeq(omega):
     return 3141-4.157*omega+1.429*10**(-3)*omega*omega
 
-omega=np.arange(1700,1910,10)
-for i in omega:
+omega_s=np.arange(1700,1910,10)
+for i in omega_s:
     q=Akahameaeq(i)
     print(i,q)
   
    
     #Results:
+    #omega_s  sigma_z
     #1700 203.91000000000076
     #1710 211.0689000000002
     #1720 218.51360000000022
